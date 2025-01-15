@@ -63,7 +63,7 @@ form.addEventListener('submit', async (e) => {
   const data = Object.fromEntries(formData.entries());
   
   try {
-    const response = await fetch('http://n8n.oskaptech.ai/window-free-quote', {
+    const response = await fetch('https://n8n.oskaptech.ai/webhook/budget-window-pros', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
