@@ -47,6 +47,14 @@ document.querySelectorAll('.cta-button').forEach(button => {
   });
 });
 
+// Show modal when clicking quote buttons
+document.querySelectorAll('.cta-button-1').forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.add('active');
+  });
+});
+
 // Close modal when clicking close button or outside
 modal.querySelector('.close-modal').addEventListener('click', () => {
   modal.classList.remove('active');
