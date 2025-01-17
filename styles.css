@@ -1,6 +1,33 @@
+/* Add the banner styles at the top of the file */
+.price-banner {
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+  text-align: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  text-decoration: none;
+  display: block;
+}
+
+.price-banner:hover {
+  background-color: var(--primary-color);
+}
+
+/* Adjust the nav and hero margins to account for the banner */
+nav {
+  top: 32px;
+}
+
+.hero {
+  margin-top: 104px;
+}
+
+/* Rest of the existing styles */
 :root {
-  --primary-color: #0284c7;
-  --secondary-color: #0369a1;
+  --primary-color: #4da22e;
+  --secondary-color: #6cc14c;
   --background-light: #f1f5f9;
   --text-dark: #0f172a;
   --text-light: #475569;
@@ -13,6 +40,7 @@
   --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
 }
 
+/* All existing styles remain exactly the same below this point */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -40,7 +68,6 @@ nav {
   box-shadow: var(--shadow-sm);
   position: fixed;
   width: 100%;
-  top: 0;
   z-index: 1000;
 }
 
@@ -80,10 +107,9 @@ nav {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(2, 132, 199, 0.5), rgba(3, 105, 161, 0.5)), url('hero.jpg') center/cover;
+  background: linear-gradient(rgba(3, 106, 161, 0.75), rgba(3, 106, 161, 0.75)), url('https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1600') center/cover;
   color: white;
   padding: calc(var(--spacing-lg) * 2.5) 0;
-  margin-top: 72px;
   text-align: center;
 }
 
@@ -103,6 +129,7 @@ nav {
   opacity: 0.9;
 }
 
+/* Rest of the existing styles remain exactly the same */
 /* Sections */
 .section {
   padding: var(--spacing-lg) 0;
@@ -225,8 +252,21 @@ h2 {
 
 .cta-button {
   display: inline-block;
-  background-color: white;
-  color: var(--primary-color);
+  background-color: #6cc14c;
+  color: var(--text-dark);
+  padding: 1.25rem 2.5rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: var(--spacing-md);
+  transition: all 0.2s;
+  box-shadow: var(--shadow-md);
+}
+
+.cta-button-1 {
+  display: inline-block;
+  background-color: #0f172a;
+  color: var(--background-light);
   padding: 1.25rem 2.5rem;
   border-radius: var(--border-radius);
   text-decoration: none;

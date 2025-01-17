@@ -1,4 +1,8 @@
-// Add to the beginning of script.js
+// Add banner click handler at the beginning
+document.querySelector('.price-banner').addEventListener('click', (e) => {
+  e.preventDefault();
+  modal.classList.add('active');
+});
 
 // Form handling
 const modal = document.createElement('div');
